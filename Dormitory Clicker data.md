@@ -28,7 +28,7 @@
           userId: "20221111",
           password: "20221111pw",
           userName: "금오공",
-          dormitory: "오름 1동"
+          dormitory: "오름1"
       }
       ```
     
@@ -36,7 +36,7 @@
   
   * 마이페이지 (회원정보, 예약정보)
     
-    * Front
+    * Front => "/user"
       
       ```
       POST {
@@ -51,7 +51,7 @@
           userId: "20221111",
           password: "20221111pw",
           userName: "금오공",
-          dormitory: "오름 1동",
+          dormitory: "오름1",
           reservation: null or 예약정보
       }
       ```
@@ -67,7 +67,7 @@
       ```
       POST {
           userId: "20221111",
-          dormitory: "오름 1동",
+          dormitory: "오름1",
           machineNum: "W1",
           startDatetime: 2022-02-02 12:00:00,
           endDatetime: 2022-02-02 16:00:00
@@ -88,7 +88,7 @@
       
       ```
       GET {
-          dormitory: "오름 1동",
+          dormitory: "오름1",
           machineNum: "W1"
       }
       ```
@@ -106,7 +106,7 @@
 
 * 메인 페이지
   
-  * Front
+  * Front => "/dormitory"
     
     ```
     POST {
@@ -117,17 +117,117 @@
   * Back
     
     ```
-    {
-        userId: "20221111",
-        dormitory: "오름 1동",
-        canReservation: 1 or 0,
-        W1: 1 or 2,
-        W2: 1 or 2,
-        ...
-        D1: 1 or 2,
-        D2: 1 or 2
-    }
-    * 1 = true / 0 = false
+    [
+      {
+          "machineNum": "W1",
+          "state": 0
+      },
+      {
+          "machineNum": "W2",
+          "state": 1
+      },
+      {
+          "machineNum": "W3",
+          "state": 1
+      },
+      {
+          "machineNum": "W4",
+          "state": 1
+      },
+      {
+          "machineNum": "D1",
+          "state": 1
+      },
+      {
+          "machineNum": "D2",
+          "state": 1
+      }
+    ]
+    * 1 = true (현재 사용 가능) / 0 = false (현재 사용 중)
     ```
     
+---
+
+* 날씨 정보 (기간설정 상의 후 수정 예정)
+
+  * Front => "/dormitory"
     
+    ```
+    GET {
+
+    }
+    ```
+  
+  * Back
+    
+    ```
+    [
+    {
+        "date": "2022-11-18 09:00:00",
+        "weather": "Clear"
+    },
+    {
+        "date": "2022-11-18 12:00:00",
+        "weather": "Clear"
+    },
+    {
+        "date": "2022-11-18 15:00:00",
+        "weather": "Clear"
+    },
+    {
+        "date": "2022-11-18 18:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-18 21:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 00:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 03:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 06:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 09:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 12:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 15:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 18:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-19 21:00:00",
+        "weather": "Clouds"
+    },
+    
+    ...,
+    
+    {
+        "date": "2022-11-23 00:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-23 03:00:00",
+        "weather": "Clouds"
+    },
+    {
+        "date": "2022-11-23 06:00:00",
+        "weather": "Clouds"
+    }
+]
+    ```
