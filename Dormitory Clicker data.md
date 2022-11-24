@@ -178,32 +178,37 @@ Dormitory Clicker
       - 성공
         
         ```
-        [
-          {
-              "machineNum": "W1",
-              "state": 0
-          },
-          {
-              "machineNum": "W2",
-              "state": 1
-          },
-          {
-              "machineNum": "W3",
-              "state": 1
-          },
-          {
-              "machineNum": "W4",
-              "state": 1
-          },
-          {
-              "machineNum": "D1",
-              "state": 1
-          },
-          {
-              "machineNum": "D2",
-              "state": 1
-          }
-        ]
+        {
+          "userId": "12312312",
+          "dormitory": "푸름1",
+          "canReservation": 1,
+          "machineStatus": [
+              {
+                  "machineNum": "W1",
+                  "state": 0
+              },
+              {
+                  "machineNum": "W2",
+                  "state": 1
+              },
+              {
+                  "machineNum": "W3",
+                  "state": 1
+              },
+              {
+                  "machineNum": "W4",
+                  "state": 1
+              },
+              {
+                  "machineNum": "D1",
+                  "state": 1
+              },
+              {
+                  "machineNum": "D2",
+                  "state": 1
+              }
+           ]
+        }
         * 1 = true (현재 사용 가능) / 0 = false (현재 사용 중)
         ```
         
