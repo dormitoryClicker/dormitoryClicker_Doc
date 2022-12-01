@@ -207,7 +207,8 @@ Dormitory Clicker
                   "machineNum": "D2",
                   "state": 1
               }
-           ]
+           ],
+           endDatetime: 2022-01-01 16:00:00 or null
         }
         * 1 = true (현재 사용 가능) / 0 = false (현재 사용 중)
         ```
